@@ -1,0 +1,12 @@
+# virtual environment 
+doc_search/
+
+# PDFs
+uploads/
+*.pdf 
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic File Upload</title>
+    <script src="/static/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Dynamic File Upload Interface</h1>
+    <form id="upload_form" onsubmit="event.preventDefault(); submitForm();">
+      <label for="num_versions"
+        >How many versions do you want to compare?</label
+      >
+      <input
+        type="number"
+        id="num_versions"
+        name="num_versions"
+        min="1"
+        value="1"
+        onchange="addFileFields()"
+      />
+      <br /><br />
+      <label for="question">Enter your question or prompt:</label>
+      <input type="text" id="question" name="question" />
+      <br /><br />
+      <div id="file_uploads">
+        <!-- File inputs will be dynamically added here -->
+      </div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <hr />
+    <h2>Results:</h2>
+    <div id="output"></div>
+  </body>
+</html>
